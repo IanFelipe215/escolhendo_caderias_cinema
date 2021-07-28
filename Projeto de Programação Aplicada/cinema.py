@@ -6,6 +6,8 @@ from pygame.image import load
 from pygame.locals import *
 
 email_de_destino = input('Digite seu email para que posssamos enviar as cadeiras selecionadas: ')
+email_de_envio = input('Email que irá enviar os ingressos')
+senha_da_conta = input('Senha da conta que será usada para enviar os ingressos')
 
 pg.init()
 
@@ -148,10 +150,10 @@ while True:
                 res_starttls = smtpObj.starttls()
                 print(res_starttls)
 
-                res_login = smtpObj.login("ianfelipihonet@gmail.com", "matematica16")
+                res_login = smtpObj.login(email_de_envio, senha_da_conta)
                 print(res_login)
 
-                smtpObj.sendmail('ianfelipinhonet@gmail.com', email_de_destino, f"Subject: --Ingresso--\nCadeiras reservadas --> {ticket} ")
+                smtpObj.sendmail(email_de_destino, email_de_destino, f"Subject: --Ingresso--\nCadeiras reservadas --> {ticket} ")
 
                 smtpObj.quit()
         #condição que muda a cor da cadeira caso selecionada
