@@ -1,1 +1,1 @@
-# escolhendo_caderias_cinema
+# escolhendo_caderias_cinema é um mini projeto que coleta as posições dos acentos que o usuário escolhe e manda um email (fornecido pelo próprio usuário no começo do código) com os devidos acentos escolhidos.
